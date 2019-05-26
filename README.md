@@ -2,9 +2,11 @@
 ## 음성 인식 비서를 구현
 ### Description
 적절한 권한을 가진 사용자(access control)는 음성 인식 비서에게 임의의 시간(Random access)에 특정한 음성 명령 또는 GUI를 통해 서비스를 제공받는다.
-### 1.2 Service list (추가 바람)
+## 1. Service Description
+### 1.1 Service list (추가 바람)
 * Login/Logout
 * ...
+### 1.2 Queueing (추가 바람)
 
 ***
 ## 2. Session Description
