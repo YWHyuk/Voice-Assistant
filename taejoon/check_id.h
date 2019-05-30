@@ -9,7 +9,7 @@ BOOL check_id(string id, string pw)
 	
 	
 	
-	if (id == "kim")
+	if (db.exist_id(id)=="1")
 	{
 		cout << db.select_db(id) << endl;
 		if (db.select_db(id) == pw)
@@ -22,11 +22,7 @@ BOOL check_id(string id, string pw)
 
 		}
 	}
-	else
-	{
-
-	}
-
+	else{}
 	db.close_db();
 	return false;
 

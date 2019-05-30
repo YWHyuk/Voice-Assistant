@@ -11,7 +11,7 @@
 
 int main()
 {
-	/*
+	
 	string id="";
 	string pw="";
 	int serect = 0;
@@ -27,16 +27,12 @@ int main()
 		id=mike.recognizeSpeech();
 		speaker.synthesizeSpeech("tell me password");
 		pw = mike.recognizeSpeech();
-		//voice.start_speaker("tell me id");
-		//id = voice.start_mike();
-		//voice.start_speaker("tell me password");
-		//pw = voice.start_mike();
 		serect++;
 	}
 	cout << "access system" << endl;
-	*/
-	Socket_server ser;
-	ser.connection();
+	
+	//Socket_server ser;
+	//ser.connection();
 
 	/*
 	while (1)
