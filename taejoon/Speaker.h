@@ -2,11 +2,10 @@
 #include <iostream>
 #include <speechapi_cxx.h>
 #include <string.h>
-#include "Voice.cpp"
 using namespace std;
 using namespace Microsoft::CognitiveServices::Speech;
 
-class Speaker : public Voice
+class Speaker
 {
 public:
 
