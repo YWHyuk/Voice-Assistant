@@ -1,5 +1,4 @@
 #include "Mike.h"
-
 string Mike::recognizeSpeech()
 {
 		// Creates an instance of a speech config with specified subscription key and service region.

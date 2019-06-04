@@ -1,6 +1,5 @@
 #include "Speech.h"
 
-
 void Speech::start_speaker(string str)
 {
 	Speaker speaker;
