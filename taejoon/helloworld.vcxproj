@@ -74,8 +74,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files\MySQL\MySQL Server 8.0\include;</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;C:\Program Files\MySQL\MySQL Server 8.0\lib;</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -107,7 +107,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libmysql.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -145,25 +145,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="Data_List.cpp" />
+    <ClCompile Include="Data_Manager.cpp" />
+    <ClCompile Include="Data_Set.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Log.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Mike.cpp" />
-    <ClCompile Include="Socket_client.cpp" />
-    <ClCompile Include="Socket_server.cpp" />
+    <ClCompile Include="Pronounce_Game.cpp" />
     <ClCompile Include="Speaker.cpp" />
-    <ClCompile Include="Thread.cpp" />
-    <ClCompile Include="Voice.cpp" />
+    <ClCompile Include="Speech.cpp" />
+    <ClCompile Include="Typing_Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="check_id.h" />
-    <ClInclude Include="Database.h" />
+    <ClInclude Include="..\..\..\..\..\바탕 화면\Log.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Data_List.h" />
+    <ClInclude Include="Data_Manager.h" />
+    <ClInclude Include="Data_Set.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Mike.h" />
-    <ClInclude Include="Socket_server.h" />
+    <ClInclude Include="Pronounce_Game.h" />
     <ClInclude Include="Speaker.h" />
-    <ClInclude Include="speech.h" />
+    <ClInclude Include="Speech.h" />
+    <ClInclude Include="Typing_Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

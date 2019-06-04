@@ -1,0 +1,10 @@
+2
+name1
+3
+pen;펜
+pineapple;파인애플
+apple;사과
+name2
+2
+computer;컴퓨터
+science;과학
