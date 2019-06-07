@@ -7,9 +7,17 @@ class Data_Set
 {
 private:
 	string word;
-	string meanning;
+	string meaning;
 	Log log;
 
 public:
-	void Data_set(string word, string meanning, bool O);
+	Data_Set(string word, string meaning);
+	void Data_OX(bool O);
+	Data_Set();
+	string Data_getWord() {
+		return word;
+	}
+	string Data_getMeaning() {
+		return meaning;
+	}
 };

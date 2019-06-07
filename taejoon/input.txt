@@ -1,10 +1,9 @@
 2
 name1
-3
-pen;펜
-pineapple;파인애플
-apple;사과
+2
+The more, the better;다다익선
+Easy come, easy go; 쉽게얻은것은 쉽게 잃은다.
 name2
 2
-computer;컴퓨터
-science;과학
+Computer.;컴퓨터
+Science.;과학

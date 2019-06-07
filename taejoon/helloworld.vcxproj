@@ -154,6 +154,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Mike.cpp" />
     <ClCompile Include="Pronounce_Game.cpp" />
+    <ClCompile Include="Resource_Gathering.cpp" />
     <ClCompile Include="Speaker.cpp" />
     <ClCompile Include="Speech.cpp" />
     <ClCompile Include="Typing_Game.cpp" />
@@ -162,14 +163,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\바탕 화면\Log.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Data_List.h" />
     <ClInclude Include="Data_Manager.h" />
     <ClInclude Include="Data_Set.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Game_List.h" />
+    <ClInclude Include="Log.h" />
     <ClInclude Include="Mike.h" />
     <ClInclude Include="Pronounce_Game.h" />
+    <ClInclude Include="Resource_Gathering.h" />
     <ClInclude Include="Speaker.h" />
     <ClInclude Include="Speech.h" />
     <ClInclude Include="Typing_Game.h" />
