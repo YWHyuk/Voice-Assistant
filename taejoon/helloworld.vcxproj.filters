@@ -54,9 +54,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Controller.cpp">
-      <Filter>소스 파일\Controller</Filter>
-    </ClCompile>
     <ClCompile Include="Mike.cpp">
       <Filter>소스 파일\Model\Speech</Filter>
     </ClCompile>
@@ -87,6 +84,12 @@
     <ClCompile Include="Typing_Game.cpp">
       <Filter>소스 파일\Model\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Resource_Gathering.cpp">
+      <Filter>소스 파일\Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>소스 파일\Controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -110,9 +113,6 @@
     <ClInclude Include="Data_Set.h">
       <Filter>헤더 파일\Model\Data</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\바탕 화면\Log.h">
-      <Filter>헤더 파일\Model\Data</Filter>
-    </ClInclude>
     <ClInclude Include="Speech.h">
       <Filter>헤더 파일\Model\Speech</Filter>
     </ClInclude>
@@ -123,6 +123,15 @@
       <Filter>헤더 파일\Model\Game</Filter>
     </ClInclude>
     <ClInclude Include="Typing_Game.h">
+      <Filter>헤더 파일\Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>헤더 파일\Model\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_List.h">
+      <Filter>헤더 파일\Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource_Gathering.h">
       <Filter>헤더 파일\Model\Game</Filter>
     </ClInclude>
   </ItemGroup>
