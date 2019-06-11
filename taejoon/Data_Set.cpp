@@ -3,7 +3,7 @@
 Data_Set::Data_Set(string word, string meanning)
 {
 	Data_Set::word = word;
-	Data_Set::meaning = meaning;
+	Data_Set::meaning = meanning;
 
 }
 

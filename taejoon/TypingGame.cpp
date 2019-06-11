@@ -1,7 +1,7 @@
 #include "TypingGame.h"
 
 TypingGame::TypingGame(QWidget *parent, std::vector<Data_Set> data_set)
-	: QWidget(parent), timer(NULL), ds(data_set),remain_time(100),total_count(data_set.size()),error_count(0)
+	: QWidget(parent), timer(NULL), ds(data_set),remain_time(100),total_count((int)data_set.size()),error_count(0)
 {
 	ui.setupUi(this);
 	ui.inputLine->setFocus();
@@ -92,7 +92,7 @@ void TypingGame::nextProcess(bool right) {
 		ds.pop_back();
 	if (ds.size() == 0) {
 		ui.wrongBar->setValue(error_count);
-		ui.progressBar->setValue(total_count + 1 - ds.size());
+		ui.progressBar->setValue(total_count + 1 - (int)ds.size());
 		return;
 	}
 	if (!right) {
@@ -101,5 +101,5 @@ void TypingGame::nextProcess(bool right) {
 		ui.beforeWord->setStyleSheet("color:#D91111;border-width: 0px;");
 	}else
 		ui.beforeWord->setStyleSheet("color:#055902;border-width: 0px;");
-	ui.progressBar->setValue(total_count + 1 - ds.size());
+	ui.progressBar->setValue(total_count + 1 - (int)ds.size());
 }

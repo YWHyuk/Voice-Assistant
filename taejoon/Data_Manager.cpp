@@ -38,7 +38,7 @@ void Data_Manager::read_file(string path)
 			getline(stream, key);
 							 //stream >> key;
 			string tempWord = "", tempMean = ""; //임시 단어와 뜻
-			int splitidx = key.find(';'); //자르는 기준은 ';'
+			int splitidx = (int)(key.find(';')); //자르는 기준은 ';'
 			tempWord.insert(0, key.substr(0, splitidx));
 			tempMean.insert(0, key.substr(splitidx + 1, key.size()));
 

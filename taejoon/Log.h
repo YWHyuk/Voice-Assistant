@@ -11,6 +11,11 @@ public:
 	const int sz;
 public:
 	Log() :log(list<string>()), sz(10) {};
+	Log& operator=(Log& source) {
+		this->log = source.log;
+		return *this;
+	}
+	Log(const Log& source) :log(source.log),sz(source.sz) {};
 	~Log() {};
 	/* Append the log
 	* Descirption:	You pass the Boolean. This mean you are Right or Wrong in test;

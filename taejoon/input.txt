@@ -1,8 +1,13 @@
 2
 name1
-2
+7
 The more, the better;다다익선
 Easy come, easy go; 쉽게얻은것은 쉽게 잃은다.
+test1;테스트1
+test2;테스트2
+test3;테스트3
+test4;테스트4
+test5;테스트5
 name2
 2
 Computer.;컴퓨터
