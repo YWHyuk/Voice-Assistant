@@ -1,0 +1,7 @@
+*.pptx
+packages/*
+taejoon/packages/*
+taejoon/Debug/*
+taejoon/x86/*
+taejoon/x64/*
+taejoon/.vs/*

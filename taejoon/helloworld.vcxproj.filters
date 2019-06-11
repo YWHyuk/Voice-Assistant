@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Controller">
+      <UniqueIdentifier>{42d0adef-237c-423d-b6d5-42c035ec6b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Model">
+      <UniqueIdentifier>{89e51815-bd29-4583-98f9-b489e7539ac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\View">
+      <UniqueIdentifier>{f6497832-8b1f-4a53-9b9e-f43a7a724fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Model\Speech">
+      <UniqueIdentifier>{616c54e9-801c-4a5e-a360-6244034e3ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Model\Data">
+      <UniqueIdentifier>{fb83336a-89c9-42da-a459-82e1332779cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Controller">
+      <UniqueIdentifier>{5ce5ef33-409d-4021-8ac4-9669a349fedc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Model">
+      <UniqueIdentifier>{65ae246c-7f26-42e1-a393-bb13050139e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\View">
+      <UniqueIdentifier>{84a2b86e-2573-49d5-855a-b4ad7668a6a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Model\Data">
+      <UniqueIdentifier>{0ce55e9a-8a05-4df4-875d-0c4dd9c41331}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Model\Speech">
+      <UniqueIdentifier>{170a9d2e-d55a-42bc-89b7-87021ca8d397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Model\Game">
+      <UniqueIdentifier>{e84f55ba-27d1-43e4-a45b-d9f1365a0de0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Model\Game">
+      <UniqueIdentifier>{497beb03-85ba-4bd2-992c-e6ba7f44bbe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{6533f66d-f4fb-43f9-8a58-b436f16b0d69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="moc">
+      <UniqueIdentifier>{cfe1c2ea-e6d7-4724-a4ca-9e13399bdd8f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Mike.cpp">
+      <Filter>소스 파일\Model\Speech</Filter>
+    </ClCompile>
+    <ClCompile Include="Speaker.cpp">
+      <Filter>소스 파일\Model\Speech</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>소스 파일\Model\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data_Set.cpp">
+      <Filter>소스 파일\Model\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data_List.cpp">
+      <Filter>소스 파일\Model\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data_Manager.cpp">
+      <Filter>소스 파일\Model\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Speech.cpp">
+      <Filter>소스 파일\Model\Speech</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Pronounce_Game.cpp">
+      <Filter>소스 파일\Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Typing_Game.cpp">
+      <Filter>소스 파일\Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource_Gathering.cpp">
+      <Filter>소스 파일\Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>소스 파일\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>소스 파일\View</Filter>
+    </ClCompile>
+    <ClCompile Include="TypingGame.cpp">
+      <Filter>소스 파일\View</Filter>
+    </ClCompile>
+    <ClCompile Include="WordBookSelect.cpp">
+      <Filter>소스 파일\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <Filter>moc</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TypingGame.cpp">
+      <Filter>moc</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_WordBookSelect.cpp">
+      <Filter>moc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mike.h">
+      <Filter>헤더 파일\Model\Speech</Filter>
+    </ClInclude>
+    <ClInclude Include="Speaker.h">
+      <Filter>헤더 파일\Model\Speech</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>헤더 파일\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Data_List.h">
+      <Filter>헤더 파일\Model\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data_Manager.h">
+      <Filter>헤더 파일\Model\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data_Set.h">
+      <Filter>헤더 파일\Model\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Speech.h">
+      <Filter>헤더 파일\Model\Speech</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>헤더 파일\Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Pronounce_Game.h">
+      <Filter>헤더 파일\Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Typing_Game.h">
+      <Filter>헤더 파일\Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>헤더 파일\Model\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_List.h">
+      <Filter>헤더 파일\Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource_Gathering.h">
+      <Filter>헤더 파일\Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MainWindow.h">
+      <Filter>헤더 파일\View</Filter>
+    </ClInclude>
+    <ClInclude Include="TypingGame.h">
+      <Filter>헤더 파일\View</Filter>
+    </ClInclude>
+    <ClInclude Include="WordBookSelect.h">
+      <Filter>헤더 파일\View</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_MainWindow.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_TypingGame.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_WordBookSelect.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+  </ItemGroup>
+</Project>
