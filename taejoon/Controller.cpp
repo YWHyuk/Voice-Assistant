@@ -1,19 +1,9 @@
 #include "Controller.h"
-#include "Game_List.h"
-#include "Speech.h"
 
 Controller::Controller()
 {
-	Data_Manager manager("input.txt");
-	Speech speech;
 
-	int i=1;
-
-	//∞‘¿”∞¥√º
-	//Game game(manager.get_words().at().get_word());
-	Pronounce_Game game1(manager.get_words().at(0).get_word());
-	Typing_Game game2(manager.get_words().at(0).get_word());
-	//Resource_Gathering game3(manager.get_words().at(0).get_word());
+	int i = 1;
 	string str1;
 	string str2;
 	
