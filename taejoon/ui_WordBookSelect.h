@@ -48,8 +48,6 @@ public:
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         listWidget = new QListWidget(WBElement);
-        new QListWidgetItem(listWidget);
-        new QListWidgetItem(listWidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
         listWidget->setGeometry(QRect(60, 40, 256, 192));
         listWidget->setStyleSheet(QString::fromUtf8(""));
@@ -72,10 +70,6 @@ public:
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
-        ___qlistwidgetitem->setText(QApplication::translate("WBElement", "\353\213\250\354\226\264\354\236\2451", nullptr));
-        QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
-        ___qlistwidgetitem1->setText(QApplication::translate("WBElement", "\353\213\250\354\226\264\354\236\2452", nullptr));
         listWidget->setSortingEnabled(__sortingEnabled);
 
         label->setText(QApplication::translate("WBElement", "Select WordBook", nullptr));

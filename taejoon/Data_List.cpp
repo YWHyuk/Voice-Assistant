@@ -14,6 +14,15 @@ void Data_List::set_path(string path)
 {
 	Data_List::path = path;
 }
+string Data_List::get_name()
+{
+	return Data_List::name;
+}
+
+void Data_List::set_name(string name)
+{
+	Data_List::name = name;
+}
 vector<Data_Set> Data_List::get_word()
 {
 	return word;

@@ -111,7 +111,7 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Form", "resource gathering", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("Form", "Pronounce Game", nullptr));
         pushButton->setText(QApplication::translate("Form", "Select WordBook", nullptr));
-        WordBookName->setText(QApplication::translate("Form", "TextLabel", nullptr));
+        WordBookName->setText(QApplication::translate("Form", "Unselected...", nullptr));
     } // retranslateUi
 
 };

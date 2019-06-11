@@ -8,9 +8,8 @@ int main(int argc,char** argv)
 {
 	Data_Manager dm("input.txt");
 	vector<Data_Set> t = dm.get_words().at(0).get_word();
-	Game g = Game(t);
 	QApplication a(argc,argv);
-	MainWindow w;
+	MainWindow w(nullptr,dm);
 	w.show();
 	w.setFocus();
 	a.exec();

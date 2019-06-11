@@ -157,7 +157,7 @@ public:
 "background:#4E7AC7;};"));
         beforeWord = new QLabel(wordQueue);
         beforeWord->setObjectName(QString::fromUtf8("beforeWord"));
-        beforeWord->setGeometry(QRect(20, 15, 181, 81));
+        beforeWord->setGeometry(QRect(20, 15, 201, 81));
         QFont font3;
         font3.setFamily(QString::fromUtf8("-\354\234\244\352\263\240\353\224\225320"));
         font3.setPointSize(11);
@@ -172,20 +172,20 @@ public:
         CurrentWord->setAlignment(Qt::AlignCenter);
         nextWord = new QLabel(wordQueue);
         nextWord->setObjectName(QString::fromUtf8("nextWord"));
-        nextWord->setGeometry(QRect(600, 15, 181, 81));
+        nextWord->setGeometry(QRect(580, 15, 201, 81));
         nextWord->setFont(font3);
         nextWord->setStyleSheet(QString::fromUtf8("QWidget{border-width: 0px;border-radius:10px;color:white;}"));
         nextWord->setAlignment(Qt::AlignCenter);
         label_1 = new QLabel(wordQueue);
         label_1->setObjectName(QString::fromUtf8("label_1"));
-        label_1->setGeometry(QRect(180, 15, 81, 81));
+        label_1->setGeometry(QRect(249, 35, 31, 41));
         label_1->setStyleSheet(QString::fromUtf8("QWidget{border-width : 0 px;}"));
-        label_1->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/rewind (1).png")));
+        label_1->setPixmap(QPixmap(QString::fromUtf8("rewind (1).png")));
         label_2 = new QLabel(wordQueue);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(540, 15, 81, 81));
+        label_2->setGeometry(QRect(520, 35, 31, 41));
         label_2->setStyleSheet(QString::fromUtf8("QWidget{border-width : 0 px;}"));
-        label_2->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/rewind (1).png")));
+        label_2->setPixmap(QPixmap(QString::fromUtf8("rewind (1).png")));
 
         retranslateUi(TypingGame);
 

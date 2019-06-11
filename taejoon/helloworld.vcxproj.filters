@@ -84,15 +84,6 @@
     <ClCompile Include="Game.cpp">
       <Filter>소스 파일\Model\Game</Filter>
     </ClCompile>
-    <ClCompile Include="Pronounce_Game.cpp">
-      <Filter>소스 파일\Model\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Typing_Game.cpp">
-      <Filter>소스 파일\Model\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Resource_Gathering.cpp">
-      <Filter>소스 파일\Model\Game</Filter>
-    </ClCompile>
     <ClCompile Include="Controller.cpp">
       <Filter>소스 파일\Controller</Filter>
     </ClCompile>
@@ -143,20 +134,8 @@
     <ClInclude Include="Game.h">
       <Filter>헤더 파일\Model\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Pronounce_Game.h">
-      <Filter>헤더 파일\Model\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Typing_Game.h">
-      <Filter>헤더 파일\Model\Game</Filter>
-    </ClInclude>
     <ClInclude Include="Log.h">
       <Filter>헤더 파일\Model\Data</Filter>
-    </ClInclude>
-    <ClInclude Include="Game_List.h">
-      <Filter>헤더 파일\Model\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource_Gathering.h">
-      <Filter>헤더 파일\Model\Game</Filter>
     </ClInclude>
     <ClInclude Include="MainWindow.h">
       <Filter>헤더 파일\View</Filter>

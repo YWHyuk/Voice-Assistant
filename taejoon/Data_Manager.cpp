@@ -14,48 +14,49 @@ void Data_Manager::read_file(string path)
 	int n;
 	string temp;
 	if (stream.is_open())
-	{
-		stream >> temp;
-		//cout << "입력받은 문자열::" << temp << endl;
-	}
+		getline(stream, temp);
 	else
-	{
-		//cout << "파일을 찾을 수 없습니다!" << endl;
-	}
+		cout << "파일을 찾을 수 없습니다!" << endl;
 	n = atoi(temp.c_str());
+
 	//단어장 개수입력받음
 	while (n--) {
 		string name;
 		string tempM;
-		stream.ignore();
+		int m;
+
 		getline(stream, name);
 		getline(stream, tempM);
 
-		Data_List tempDataList(name); //새로운 Data_List를 생성해줌.
-		int m = atoi(tempM.c_str());
+		Data_List tempDataList(name);	//새로운 Data_List를 생성해줌.
+		m = atoi(tempM.c_str());		//loop counter
+
 		for (int i = 0; i < m; i++) {
-			string key = ""; //word;meaning 기록
+			string key;			//word;meaning 기록
+			string tempWord;	//임시 단어
+			string tempMean;	//임시 단어
+			int splitidx;		//자를 인덱스
+			
+			//receive ket
 			getline(stream, key);
-							 //stream >> key;
-			string tempWord = "", tempMean = ""; //임시 단어와 뜻
-			int splitidx = (int)(key.find(';')); //자르는 기준은 ';'
+
+			//get splitidx(자르는 기준은 ';')
+			splitidx = (int)(key.find(';')); 
+			
 			tempWord.insert(0, key.substr(0, splitidx));
 			tempMean.insert(0, key.substr(splitidx + 1, key.size()));
 
-			Data_Set tempSet(tempWord, tempMean); //임시 세트 생성
-			tempDataList.insertSet(tempSet);
-			//cout << "단어 : " << tempWord << " 뜻 : " << tempMean << " 저장됨";
+			//세트 삽입
+			tempDataList.insertSet(Data_Set(tempWord,tempMean));
 		}
 		this->words.push_back(tempDataList);
-
-		//Data_Manager::words.push_back();
-
 	}
 
 }
 
 void Data_Manager::reload_file(string path)
 {
+	this->words.clear();
 	read_file(path);
 }
 vector<Data_List> Data_Manager::get_words()

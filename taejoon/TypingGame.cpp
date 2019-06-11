@@ -49,10 +49,10 @@ void TypingGame::update() {
 }
 void TypingGame::check() {
 	QString input = ui.inputLine->text();
-	//ui.inputLine->setText(QString(""));
+	ui.inputLine->setText(QString(""));
 	if (ds.size() < 2)
 		return;
-	int ret = QString::compare(input, QString::fromLocal8Bit(ds.at(ds.size() - 2).Data_getWord().c_str()));
+	int ret = QString::compare(input, QString::fromLocal8Bit(ds.at(ds.size() - 2).Data_getMeaning().c_str()));
 	if (ret != 0)
 		nextProcess(false);
 	else

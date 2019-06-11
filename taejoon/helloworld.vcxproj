@@ -171,12 +171,9 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Mike.cpp" />
-    <ClCompile Include="Pronounce_Game.cpp" />
-    <ClCompile Include="Resource_Gathering.cpp" />
     <ClCompile Include="Speaker.cpp" />
     <ClCompile Include="Speech.cpp" />
     <ClCompile Include="TypingGame.cpp" />
-    <ClCompile Include="Typing_Game.cpp" />
     <ClCompile Include="WordBookSelect.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -188,16 +185,12 @@
     <ClInclude Include="Data_Manager.h" />
     <ClInclude Include="Data_Set.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Game_List.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="Mike.h" />
-    <ClInclude Include="Pronounce_Game.h" />
-    <ClInclude Include="Resource_Gathering.h" />
     <ClInclude Include="Speaker.h" />
     <ClInclude Include="Speech.h" />
     <ClInclude Include="TypingGame.h" />
-    <ClInclude Include="Typing_Game.h" />
     <ClInclude Include="ui_MainWindow.h" />
     <ClInclude Include="ui_TypingGame.h" />
     <ClInclude Include="ui_WordBookSelect.h" />
