@@ -174,7 +174,7 @@ public:
 		words->setText(QApplication::translate("Dialog", "Word", nullptr));
 		helper->setText(QApplication::translate("Dialog", "Waiting for pronouncing...", nullptr));
 		result->setText(QApplication::translate("Dialog", "Result", nullptr));
-		pushButton->setText(QApplication::translate("Dialog", "PushButton", nullptr));
+		pushButton->setText(QApplication::translate("Dialog", "PassButton", nullptr));
 		left_time_label->setText(QApplication::translate("Dialog", "Left TIme", nullptr));
 		left_time->setText(QApplication::translate("Dialog", "30", nullptr));
 		counter->setText(QApplication::translate("Dialog", "0/10", nullptr));

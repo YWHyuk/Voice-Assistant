@@ -1,7 +1,7 @@
 #include "MainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent, Data_Manager& test)
-	: QWidget(parent),typingGame(NULL),dm(test)
+	: QWidget(parent),typingGame(NULL), pronounceGame(NULL),resourceGame(NULL),dm(test)
 {
 	ui.setupUi(this);
 	/*이벤트 처리 */
@@ -36,20 +36,55 @@ void MainWindow::tabBarChange(int index) {
 	}
 	switch (index) {
 	case 0:
+		if (typingGame != NULL) {
+			delete(typingGame);
+			typingGame = NULL;
+		}
+		if (resourceGame != NULL) {
+			delete(resourceGame);
+			resourceGame = NULL;
+		}
+		if (pronounceGame != NULL) {
+			delete(pronounceGame);
+			pronounceGame = NULL;
+		}
 		typingGame = new TypingGame(currWidget,set_random(dummy));
 		typingGame->setGeometry(50, 50, 921, 331);
 		typingGame->show();
 		break;
 	case 1:
-
+		if (typingGame != NULL) {
+			delete(typingGame);
+			typingGame = NULL;
+		}
+		if (resourceGame != NULL) {
+			delete(resourceGame);
+			resourceGame = NULL;
+		}
+		if (pronounceGame != NULL) {
+			delete(pronounceGame);
+			pronounceGame = NULL;
+		}
+		resourceGame = new resourcegathering(currWidget, set_random(dummy));
+		resourceGame->setGeometry(290, 50, 442, 331);
+		resourceGame->show();
+		break;
+	case 2:
+		if (typingGame != NULL) {
+			delete(typingGame);
+			typingGame = NULL;
+		}
+		if (resourceGame != NULL) {
+			delete(resourceGame);
+			resourceGame = NULL;
+		}
+		if (pronounceGame != NULL) {
+			delete(pronounceGame);
+			pronounceGame = NULL;
+		}
 		pronounceGame = new pronouncegame(currWidget, set_random(dummy));
 		pronounceGame->setGeometry(290, 50, 442, 331);
 		pronounceGame->show();
-		break;
-	case 2:
-		resourceGame = new resourcegathering(currWidget,set_random(dummy));
-		resourceGame->setGeometry(290, 50, 442, 331);
-		resourceGame->show();
 		break;
 	}
 }
@@ -69,7 +104,7 @@ vector<Data_Set>& MainWindow::get_words() {
 	QString val = ui.WordBookName->text();
 	int sz = (int)(dm.get_words().size());
 	for (int i = 0; i < sz; i++) {
-		if ((QString::compare(val, QString::fromStdString(dm.get_words().at(i).get_name()))) == 0)
+		if ((QString::compare(val, QString::fromLocal8Bit(dm.get_words().at(i).get_name().c_str()))) == 0)
 			return dm.get_words().at(i).get_word();
 	}
 	vector<Data_Set>& tt = *((vector<Data_Set>*)nullptr);

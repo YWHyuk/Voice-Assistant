@@ -17,7 +17,8 @@ class pronouncegame : public QWidget
 
 public:
 	pronouncegame(QWidget *parent = Q_NULLPTR, vector<Data_Set>& wordlist = (vector<Data_Set>)NULL);
-
+	~pronouncegame() { assistant->flags = false; assistant->quit(); assistant->wait(); }
+	void goNext();
 private slots:
 	void on_pushButton_clicked();
 	void update2();

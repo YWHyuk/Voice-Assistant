@@ -14,7 +14,7 @@ class resourcegathering : public QWidget
 
 public:
 	resourcegathering(QWidget *parent = Q_NULLPTR, vector<Data_Set>& wordlist = (*((vector<Data_Set>*)NULL)));
-
+	~resourcegathering() { assistant->flags = false; assistant->quit(); assistant->wait(); };
 private slots:
 	void on_pushButton_clicked();
 	void handleResults(const QString);

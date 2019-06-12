@@ -6,7 +6,7 @@ WordBookSelect::WordBookSelect(QWidget *parent, Data_Manager& test)
 	ui.setupUi(this);
 	this->setStyle(QStyleFactory::create("Fusion"));
 	for (int i = 0; i < test.get_words().size(); i++) {
-		new QListWidgetItem(QString::fromStdString(test.get_words().at(i).get_name()),ui.listWidget);
+		new QListWidgetItem(QString::fromLocal8Bit(test.get_words().at(i).get_name().c_str()), ui.listWidget);
 	}
 	connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton *)), parent, SLOT(slotSelected(QAbstractButton *)));
 }

@@ -16,25 +16,23 @@ pronouncegame::pronouncegame(QWidget *parent, vector<Data_Set>& wordlist)
 	timer = new QTimer(this);
 	connect(timer, SIGNAL(timeout()), this, SLOT(update2()));
 	timer->start(100);
-
 	assistant = new SpeechT();
+	assistant->flags = true;
 	connect(assistant, SIGNAL(resultReady(QString)), this, SLOT(handleResults(QString)));
 	assistant->start();
 }
 
 void pronouncegame::on_pushButton_clicked() {
-	//correct answer
-	if (QString::compare(ui.helper->text(), ui.words->text()) == 0)
-		correct++;
-	else
-		return;
 	count++;
 	if (count < DataSetLength) {
 		ui.counter->setText(QString::number(count) + QString::fromStdString("/") + QString::number(DataSetLength));
 		//if(count != Data)
-		ui.words->setText(QString::fromStdString(words.at(count).Data_getWord()));
+		ui.words->setText(QString::fromLocal8Bit(words.at(count).Data_getWord().c_str()));
 	}
-	else {
+}
+void pronouncegame::update2() {
+	if (remain_time == 0) {
+		timer->stop();
 		ui.counter->hide();
 		ui.helper->hide();
 		ui.result->show();
@@ -42,7 +40,9 @@ void pronouncegame::on_pushButton_clicked() {
 		ui.words->setText(QString::number(correct) + QString::fromStdString("/") + QString::number(DataSetLength));
 		ui.pushButton->setEnabled(false);
 		timer->stop();
-		assistant->exit();
+		assistant->flags = false;
+		assistant->quit();
+		assistant->wait();
 		QMessageBox msgBox;
 		QString result = QString("Problem count: ") + QString::number(DataSetLength)\
 			+ QString("\nRight Answer: ") + QString::number(correct)\
@@ -62,12 +62,6 @@ void pronouncegame::on_pushButton_clicked() {
 		msgBox.setStandardButtons(QMessageBox::Ok);
 		msgBox.setDefaultButton(QMessageBox::Ok);
 		msgBox.exec();
-	}
-}
-void pronouncegame::update2() {
-	if (remain_time == 0) {
-		timer->stop();
-		on_pushButton_clicked();
 		return;
 	}
 	remain_time -= 10;
@@ -81,5 +75,19 @@ void pronouncegame::handleResults(const QString rec) {
 	}
 	else {
 		ui.helper->setText(QString("Pronounce to remove words..."));
+	}
+}
+
+void pronouncegame::goNext() {
+	//correct answer
+	if (QString::compare(ui.helper->text(), ui.words->text()) == 0)
+		correct++;
+	else
+		return;
+	count++;
+	if (count < DataSetLength) {
+		ui.counter->setText(QString::number(count) + QString::fromStdString("/") + QString::number(DataSetLength));
+		//if(count != Data)
+		ui.words->setText(QString::fromLocal8Bit(words.at(count).Data_getWord().c_str()));
 	}
 }

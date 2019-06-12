@@ -9,7 +9,7 @@ class SpeechT : public QThread
 		void run() override {
 		QString result = QString("123");
 		
-		while (1) {
+		while (flags) {
 			Speech sp;
 			QString rec = QString::fromStdString(sp.start_mike());
 			emit resultReady(rec);
@@ -17,4 +17,6 @@ class SpeechT : public QThread
 	}
 signals:
 	void resultReady(const QString s);
+public:
+	bool flags;
 };

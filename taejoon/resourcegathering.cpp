@@ -65,6 +65,7 @@ resourcegathering::resourcegathering(QWidget *parent, vector<Data_Set>& wordlist
 	for (int i = 0; i < total_count; i++)
 		solved[i] = false;
 	assistant = new SpeechT();
+	assistant->flags = true;
 	connect(assistant, SIGNAL(resultReady(QString)), this, SLOT(handleResults(QString)));
 	assistant->start();	
 }
@@ -80,152 +81,167 @@ void resourcegathering::on_pushButton_clicked() {
 				count++;
 				solved[15] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_16->setText(QString(""));
 				break;
 			}
 		}
 	case 15:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_15->text()) == 0) {
 			if (solved[14] != true) {
 				count++;
 				solved[14] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_15->setText(QString(""));
 				break;
 			}
 		}
 	case 14:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_14->text()) == 0) {
 			if (solved[13] != true) {
 				count++;
 				solved[13] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_14->setText(QString(""));
 				break;
 			}
 		}
 	case 13:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_13->text()) == 0) {
 			if (solved[12] != true) {
 				count++;
 				solved[12] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_13->setText(QString(""));
 				break;
 			}
 		}
 	case 12:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_12->text()) == 0) {
 			if (solved[11] != true) {
 				count++;
 				solved[11] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_12->setText(QString(""));
 				break;
 			}
 		}
 	case 11:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_11->text()) == 0) {
 			if (solved[10] != true) {
 				count++;
 				solved[10] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_11->setText(QString(""));
 				break;
 			}
 		}
 	case 10:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_10->text()) == 0) {
 			if (solved[9] != true) {
 				count++;
 				solved[9] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_10->setText(QString(""));
 				break;
 			}
 		}
 	case 9:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_9->text()) == 0) {
 			if (solved[8] != true) {
 				count++;
 				solved[8] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_9->setText(QString(""));
 				break;
 			}
 		}
 	case 8:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_8->text()) == 0) {
 			if (solved[7] != true) {
 				count++;
 				solved[7] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_8->setText(QString(""));
 				break;
 			}
 		}
 	case 7:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_7->text()) == 0) {
 			if (solved[6] != true) {
 				count++;
 				solved[6] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_7->setText(QString(""));
 				break;
 			}
 		}
 	case 6:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_6->text()) == 0) {
 			if (solved[5] != true) {
 				count++;
 				solved[5] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_6->setText(QString(""));
 				break;
 			}
 		}
 	case 5:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_5->text()) == 0) {
 			if (solved[4] != true) {
 				count++;
 				solved[4] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_5->setText(QString(""));
 				break;
 			}
 		}
 	case 4:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_4->text()) == 0) {
 			if (solved[3] != true) {
 				count++;
 				solved[3] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_4->setText(QString(""));
 				break;
 			}
 		}
 	case 3:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_3->text()) == 0) {
 			if (solved[2] != true) {
 				count++;
 				solved[2] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_3->setText(QString(""));
 				break;
 			}
 		}
 	case 2:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_2->text()) == 0) {
 			if (solved[1] != true) {
 				count++;
 				solved[1] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_2->setText(QString(""));
 				break;
 
 			}
 		}
 	case 1:
-		if (QString::compare(ui.helper->text(), ui.label_16->text()) == 0) {
+		if (QString::compare(ui.helper->text(), ui.label_1->text()) == 0) {
 			if (solved[0] != true) {
 				count++;
 				solved[0] = true;
 				ui.count->setText(QString::number(count) + QString::fromStdString("/") + QString::number(total_count));
+				ui.label_1->setText(QString(""));
 				break;
 			}
 		}
-		break;
+		return;
 	default:
-		break;
+		break;;
 	}
 
 	if (count == total_count) {
-		assistant->exit();
 		end();
 	}
 }
@@ -238,6 +254,9 @@ void resourcegathering::timerEvent(QTimerEvent *event)
 
 void resourcegathering::end() {
 	//¼û±è
+	assistant->flags = false;
+	assistant->quit();
+	assistant->wait();
 	killTimer(timerId);
 	ui.helper->hide();
 	ui.left_time->hide();
@@ -254,7 +273,7 @@ void resourcegathering::end() {
 void resourcegathering::handleResults(const QString rec) {
 	if (rec.size() != 0) {
 		ui.helper->setText(rec);
-		//on_pushButton_clicked();
+		on_pushButton_clicked();
 	}
 	else {
 		ui.helper->setText(QString("Pronounce to remove words..."));
