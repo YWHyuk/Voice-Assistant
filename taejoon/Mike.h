@@ -9,5 +9,4 @@ class Mike
 {
 public:
 	string recognizeSpeech();
-	
 };

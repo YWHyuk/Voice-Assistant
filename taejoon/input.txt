@@ -1,14 +1,93 @@
+5
+속담1
 2
-name1
-7
 The more, the better;다다익선
 Easy come, easy go; 쉽게얻은것은 쉽게 잃은다.
-test1;테스트1
-test2;테스트2
-test3;테스트3
-test4;테스트4
-test5;테스트5
-name2
-2
+단어1
+20
 Computer.;컴퓨터
 Science.;과학
+Obscure.;이해하기 힘든,모호한
+Superficial.;피상[표면]적인
+Analogy.;비유,유사점
+Temper.;기분
+Specification.;명세서
+Disappoint.;실망
+Enigma.;수수께끼
+Deprive.;~을 빼앗다
+Intention.;의사,의도,목적
+Ensure.;보장하다
+Compromise.;타협,절충
+Column.;기념비, 칼럼
+Encapsulation.;캡슐화
+Champion.;투사,우승자
+Excuse.;변명,이유,핑계 거리
+Unanimous.;만장 일치의
+Static.;정적의
+Revenue.;수익,수입
+단어2
+20
+Authentication.; 인증
+Authorization.; 인가
+Accounting.;회계
+Delay.;지연
+Packet.;패킷
+Menace.;위협,위협적인 존재
+Decent.;질이 괜찮은, 품위 있는, 적절한
+Layer.;계층
+Permit.;허용
+Log.;
+Inspection.;사찰,점검
+Infamous.;악명 높은
+Recapitalization.;자본 재구성
+Vigilante.;자경단,자경단원
+Courtesy.;공손함,정중함,서비스의
+Commencement.;시작,개시,졸업식
+Preach.;설교하다,설파하다
+Anchor.;닻,정박하다
+Avarice.;탐욕
+Aries.;양자리
+단어3
+20
+Benevolence.;자비심,박애
+Doge.;(도시국가의)총독
+Conversational.;구어의, 대화의
+Contrary.;반대의
+Conjunction.;접속사
+Intention.;강화,보강
+Affirmation.;확언,단언
+Quantity.;양
+Maitreya.;미륵보살
+Hinayana.;소승불교
+Equation.;방정식
+Postern.;뒷문
+Paleolithic.;석기시대
+Artifact.;인공물,공예품
+Celt.;돌도끼
+Encyclopedia.;백과사전
+Wonder.;불가사의
+Chevalier.;기사
+Charter.;헌장,선언문,인가서
+Pale.;말뚝,울타리
+단어4
+20
+Verge.;가장자리,변두리
+Trinket.;장신구,패물
+Confidence.;신뢰,확신
+Insidious.;교활한,은밀한
+Tide.;조류,
+Fiction.;허상,허구
+Hawk.;매
+Senate.;상원
+Coward.;겁쟁이
+Vigor.;힘,활기
+Flesh.;살,살점
+Bond.;유대,끈
+Culture.;문화
+Matrix.;행렬
+Outlaw.;무법자
+Babarian.;야만인
+Laboratory.;실험실
+Meal.;식사
+Abomination.;괴물,혐오스러운 것
+Plague.;역병

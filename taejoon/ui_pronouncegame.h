@@ -106,6 +106,7 @@ public:
 		pushButton->setGeometry(QRect(171, 290, 100, 30));
 		QFont font2;
 		font2.setFamily(QString::fromUtf8("-\354\234\244\352\263\240\353\224\225320"));
+		font2.setPointSize(10);
 		pushButton->setFont(font2);
 		pushButton->setStyleSheet(QString::fromUtf8("QPushButton{background:#375D81;color:white;}"));
 		pushButton->setAutoExclusive(false);
@@ -121,7 +122,7 @@ public:
 		verticalLayoutWidget_2 = new QWidget(background);
 		verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
 		verticalLayoutWidget_2->setGeometry(QRect(10, 10, 81, 81));
-		verticalLayoutWidget_2->setStyleSheet(QString::fromUtf8("QWidget#verticalLayoutWidget_2{background:#375D81;}QLabel{background:#375D81;}"));
+		verticalLayoutWidget_2->setStyleSheet(QString::fromUtf8("QWidget#verticalLayoutWidget_2{background:#375D81;}QLabel{background:#375D81;	}"));
 		verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
 		verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
 		verticalLayout_2->setSizeConstraint(QLayout::SetDefaultConstraint);

@@ -167,6 +167,7 @@
     <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_pronouncegame.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_resourcegathering.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_SpeechT.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_TypingGame.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_WordBookSelect.cpp" />
     <ClCompile Include="Log.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="resourcegathering.h" />
     <ClInclude Include="Speaker.h" />
     <ClInclude Include="Speech.h" />
+    <ClInclude Include="SpeechT.h" />
     <ClInclude Include="TypingGame.h" />
     <ClInclude Include="ui_MainWindow.h" />
     <ClInclude Include="ui_pronouncegame.h" />

@@ -91,11 +91,13 @@ public:
         verticalLayoutWidget_2 = new QWidget(Dialogs2);
         verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
         verticalLayoutWidget_2->setGeometry(QRect(80, 30, 281, 231));
-        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
+		//verticalLayoutWidget_2->setStyleSheet("QLabel{background:white;color:black;}");
+		verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setSizeConstraint(QLayout::SetFixedSize);
+        verticalLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        count = new QLabel(verticalLayoutWidget_2);
+		
+		count = new QLabel(verticalLayoutWidget_2);
         count->setObjectName(QString::fromUtf8("count"));
         QFont font2;
         font2.setFamily(QString::fromUtf8("-\354\234\244\352\263\240\353\224\225320"));
@@ -108,7 +110,7 @@ public:
 
         formLayout = new QFormLayout();
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
-        formLayout->setSizeConstraint(QLayout::SetFixedSize);
+        formLayout->setSizeConstraint(QLayout::SetMaximumSize);
         formLayout->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
         formLayout->setLabelAlignment(Qt::AlignCenter);
         formLayout->setFormAlignment(Qt::AlignHCenter|Qt::AlignTop);
