@@ -59,7 +59,7 @@ void Data_Manager::reload_file(string path)
 	this->words.clear();
 	read_file(path);
 }
-vector<Data_List> Data_Manager::get_words()
+vector<Data_List>& Data_Manager::get_words()
 {
 	return words;
 }

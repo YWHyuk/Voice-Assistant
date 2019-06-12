@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QtWidgets/qwidget.h>
+#include <QtWidgets/qmessagebox.h>
 #include <QTimer>
 #include <QString>
 #include <QVector>
@@ -14,7 +15,7 @@ class TypingGame : public QWidget
 	Q_OBJECT
 
 public:
-	TypingGame(QWidget *parent = Q_NULLPTR, std::vector<Data_Set> data_set = std::vector<Data_Set>());
+	TypingGame(QWidget *parent = Q_NULLPTR, std::vector<Data_Set>& data_set = std::vector<Data_Set>());
 	~TypingGame();
 public slots:
 	void update();

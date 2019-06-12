@@ -105,6 +105,18 @@
     <ClCompile Include="GeneratedFiles\Debug\moc_WordBookSelect.cpp">
       <Filter>moc</Filter>
     </ClCompile>
+    <ClCompile Include="PronounceGame.cpp">
+      <Filter>소스 파일\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pronouncegame.cpp">
+      <Filter>moc</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_resourcegathering.cpp">
+      <Filter>moc</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcegathering.cpp">
+      <Filter>소스 파일\View</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -154,6 +166,18 @@
     </ClInclude>
     <ClInclude Include="ui_WordBookSelect.h">
       <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="PronounceGame.h">
+      <Filter>헤더 파일\View</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_pronouncegame.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_resourcegathering.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcegathering.h">
+      <Filter>헤더 파일\View</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -14,24 +14,42 @@ MainWindow::~MainWindow()
 }
 void MainWindow::tabBarChange(int index) {
 	QWidget* currWidget = ui.tabWidget->currentWidget();
-	vector<Data_Set> dummy;
-	for (int i = 0; i < 32; i++) {
-		dummy.push_back(Data_Set());
-	}	
+	vector<Data_Set>& dummy = get_words();
+	if (&dummy == nullptr) {
+		/* 抗寇 贸府 */
+		QMessageBox msgBox;
+		msgBox.setWindowTitle("Error");
+		msgBox.setText("Wordbook is not selected...!");
+		msgBox.setStyleSheet(QString::fromUtf8("QWidget {\n"
+			"    background: #4E7AC7;	\n"
+			"    color : white;\n"
+			"	 min-width: 300px;\n"
+			"}"));
+		QFont font1;
+		font1.setFamily(QString::fromUtf8("-\354\234\244\352\263\240\353\224\225320"));
+		font1.setPointSize(12);
+		msgBox.setFont(font1);
+		msgBox.setStandardButtons(QMessageBox::Ok);
+		msgBox.setDefaultButton(QMessageBox::Ok);
+		msgBox.exec();
+		return;
+	}
 	switch (index) {
 	case 0:
-		dummy = get_words();
-		if (dummy.size() == 0) {
-			/* 抗寇 贸府 */
-			return;
-		}
 		typingGame = new TypingGame(currWidget,set_random(dummy));
 		typingGame->setGeometry(50, 50, 921, 331);
 		typingGame->show();
 		break;
 	case 1:
+
+		pronounceGame = new pronouncegame(currWidget, set_random(dummy));
+		pronounceGame->setGeometry(290, 50, 442, 331);
+		pronounceGame->show();
 		break;
 	case 2:
+		resourceGame = new resourcegathering(currWidget,set_random(dummy));
+		resourceGame->setGeometry(290, 50, 442, 331);
+		resourceGame->show();
 		break;
 	}
 }
@@ -47,14 +65,15 @@ void MainWindow::slotSelected(QAbstractButton * temp) {
 	QString selected = wbs->getSelectedString();
 	ui.WordBookName->setText(selected);
 }
-vector<Data_Set> MainWindow::get_words() {
+vector<Data_Set>& MainWindow::get_words() {
 	QString val = ui.WordBookName->text();
 	int sz = (int)(dm.get_words().size());
 	for (int i = 0; i < sz; i++) {
 		if ((QString::compare(val, QString::fromStdString(dm.get_words().at(i).get_name()))) == 0)
 			return dm.get_words().at(i).get_word();
 	}
-	return vector<Data_Set>();
+	vector<Data_Set>& tt = *((vector<Data_Set>*)nullptr);
+	return tt;
 }
 
 vector<Data_Set> MainWindow::set_random(vector<Data_Set> src) {

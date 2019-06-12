@@ -15,5 +15,5 @@ public:
 	Data_Manager(string path);
 	void read_file(string path);
 	void reload_file(string path);
-	vector<Data_List> get_words();
+	vector<Data_List>& get_words();
 };

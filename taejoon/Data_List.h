@@ -13,6 +13,6 @@ public:
 	void set_path(string path);
 	string get_name();
 	void set_name(string name);
-	vector<Data_Set> get_word();
+	vector<Data_Set>& get_word();
 	void insertSet(Data_Set& DS);
 };

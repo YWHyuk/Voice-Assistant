@@ -6,7 +6,10 @@
 #include "TypingGame.h"
 #include "Data_Set.h"
 #include "WordBookSelect.h"
+#include "PronounceGame.h"
+#include "resourcegathering.h"
 #include "Data_Manager.h"
+
 
 class MainWindow : public QWidget
 {
@@ -22,8 +25,10 @@ public slots:
 private:
 	Ui::Form ui;
 	TypingGame *typingGame;
+	pronouncegame *pronounceGame;
+	resourcegathering *resourceGame;
 	WordBookSelect *wbs;
 	Data_Manager& dm;
-	vector<Data_Set> get_words();
+	vector<Data_Set>& get_words();
 	vector<Data_Set> set_random(vector<Data_Set> src);
 };

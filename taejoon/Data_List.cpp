@@ -23,7 +23,7 @@ void Data_List::set_name(string name)
 {
 	Data_List::name = name;
 }
-vector<Data_Set> Data_List::get_word()
+vector<Data_Set>& Data_List::get_word()
 {
 	return word;
 }

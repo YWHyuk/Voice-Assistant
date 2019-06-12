@@ -1,6 +1,6 @@
 #include "TypingGame.h"
 
-TypingGame::TypingGame(QWidget *parent, std::vector<Data_Set> data_set)
+TypingGame::TypingGame(QWidget *parent, std::vector<Data_Set>& data_set)
 	: QWidget(parent), timer(NULL), ds(data_set),remain_time(100),total_count((int)data_set.size()),error_count(0)
 {
 	ui.setupUi(this);
@@ -26,21 +26,35 @@ void TypingGame::update() {
 		if (ds.size() > 1)
 			ui.timeBar->setValue(remain_time--);
 		else {
-			timer->start(0);
-			/*
-			결과 알려주는 다이얼로그 띄우자.
-			*/
+			timer->stop();
+			QMessageBox msgBox;
+			QString result = QString("Problem count: ") + QString::number(total_count)\
+				+ QString("\nRight Answer: ") + QString::number(total_count - error_count)\
+				+ QString("\nWrong Answer: ") + QString::number(error_count);
+			msgBox.setWindowTitle("Result");
+			msgBox.setText(result);
+			msgBox.setStyleSheet(QString::fromUtf8("QWidget {\n"
+				"    background: #4E7AC7;	\n"
+				"    color : white;\n"
+				"	 min-width: 300px;\n"
+				"}"));
+			QFont font1;
+			font1.setFamily(QString::fromUtf8("-\354\234\244\352\263\240\353\224\225320"));
+			font1.setPointSize(12);
+			msgBox.setFont(font1);
+			msgBox.setMinimumSize(450, 300);
+			msgBox.setStandardButtons(QMessageBox::Ok);
+			msgBox.setDefaultButton(QMessageBox::Ok);
+			msgBox.exec();
 			return;
 		}
 	}
 	else {
 		ui.timeBar->setValue(remain_time);
-		
-		
 		nextProcess(false);
 		setWord();
 		if (ds.size() <= 1) {
-			timer->start(0);
+			timer->stop();
 			return;
 		}
 		remain_time = 100;
