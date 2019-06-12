@@ -8,6 +8,7 @@
 #include "ui_TypingGame.h"
 #include <vector>
 #include "Data_Set.h"
+#include "Speaker.h"
 #include <string>
 
 class TypingGame : public QWidget
@@ -28,7 +29,7 @@ private:
 	
 	int total_count;
 	int error_count;
-
+	Speaker spk;
 	void setWord();
 	void nextProcess(bool right);
 };

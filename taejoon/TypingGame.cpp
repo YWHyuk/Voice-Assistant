@@ -92,7 +92,7 @@ void TypingGame::setWord() {
 	Data_Set temp1 = ds.at(ds.size() - 2);
 	word = QString::fromLocal8Bit(temp1.Data_getWord().c_str());
 	ui.CurrentWord->setText(word);
-	
+	//spk.synthesizeSpeech(temp1.Data_getWord());
 	if (ds.size() < 3) {
 		ui.nextWord->setText("");
 		return;

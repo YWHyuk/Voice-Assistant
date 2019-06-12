@@ -21,7 +21,7 @@ resourcegathering::resourcegathering(QWidget *parent, vector<Data_Set>& wordlist
 	ui.verticalLayoutWidget_3->hide();
 	ui.result->hide();
 	ui.score->hide();
-
+	ui.pushButton->hide();
 	//단어 설정
 	switch (total_count) {
 	case 16:

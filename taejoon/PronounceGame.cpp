@@ -29,6 +29,39 @@ void pronouncegame::on_pushButton_clicked() {
 		//if(count != Data)
 		ui.words->setText(QString::fromLocal8Bit(words.at(count).Data_getWord().c_str()));
 	}
+	else {
+		timer->stop();
+		ui.counter->hide();
+		ui.helper->hide();
+		ui.result->show();
+
+		ui.words->setText(QString::number(correct) + QString::fromStdString("/") + QString::number(DataSetLength));
+		ui.pushButton->setEnabled(false);
+		timer->stop();
+		assistant->flags = false;
+		assistant->quit();
+		assistant->wait();
+		QMessageBox msgBox;
+		QString result = QString("Problem count: ") + QString::number(DataSetLength)\
+			+ QString("\nRight Answer: ") + QString::number(correct)\
+			+ QString("\nWrong Answer: ") + QString::number(DataSetLength - correct);
+		msgBox.setWindowTitle("Result");
+		msgBox.setText(result);
+		msgBox.setStyleSheet(QString::fromUtf8("QWidget {\n"
+			"    background: #4E7AC7;	\n"
+			"    color : white;\n"
+			"	 min-width: 300px;\n"
+			"}"));
+		QFont font1;
+		font1.setFamily(QString::fromUtf8("-\354\234\244\352\263\240\353\224\225320"));
+		font1.setPointSize(12);
+		msgBox.setFont(font1);
+		msgBox.setMinimumSize(450, 300);
+		msgBox.setStandardButtons(QMessageBox::Ok);
+		msgBox.setDefaultButton(QMessageBox::Ok);
+		msgBox.exec();
+		return;
+	}
 }
 void pronouncegame::update2() {
 	if (remain_time == 0) {
@@ -71,7 +104,7 @@ void pronouncegame::update2() {
 void pronouncegame::handleResults(const QString rec) {
 	if (rec.size() != 0) {
 		ui.helper->setText(rec);
-		on_pushButton_clicked();
+		goNext();
 	}
 	else {
 		ui.helper->setText(QString("Pronounce to remove words..."));
